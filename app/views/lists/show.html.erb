@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @list.name %>
+</p>
+
+<h2> All Bookmarks </h2>
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li><%= bookmark.comment %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a Bookmark', new_list_bookmark_path(@list) %>
+<%= link_to 'Back', lists_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>lists</h1>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody class = "container">
+    <% @lists.each do |list| %>
+      <tr>
+       <div class ="d-flex flex-row">
+        <div>
+        <th scope="row"></th>
+        <td><%= list.name %></td>
+        </div>
+        <div>
+        <td><%= link_to 'Show', list %></td>
+      >
+        </div>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New list', new_list_path %>
