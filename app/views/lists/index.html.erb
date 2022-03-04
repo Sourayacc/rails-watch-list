@@ -3,10 +3,9 @@
 <h1>lists</h1>
 
 <table class = "table">
-  <thead>
+  <thead class = "container">
     <tr>
-      <th scope="col">Name</th>
-      <th colspan="5"></th>
+     <th scope="col">Name</th>
     </tr>
   </thead>
 
@@ -15,12 +14,13 @@
       <tr>
        <div class ="d-flex flex-row">
         <div>
-        <th scope="row"></th>
-        <td><%= list.name %></td>
+
+          <th scope="row"></th>
+          <td><img src="https://images.unsplash.com/photo-1614628079765-6c164f4bd970?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwYXJ0ZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" class="avatar-square" alt=""></td>
+          <td><%= list.name %></td>
         </div>
         <div>
-        <td><%= link_to 'Show', list %></td>
-      >
+          <td class="btn btn-secondary btn-sm"><%= link_to 'Show', list %></td>
         </div>
         </div>
       </tr>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New list', new_list_path %>
+<%= link_to 'New list', new_list_path, class: "btn btn-ghost" %>
